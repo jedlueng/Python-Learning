@@ -1,0 +1,1 @@
+- This is notes that I made from automated boring stuff in python course 
