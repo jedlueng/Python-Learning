@@ -1,0 +1,7 @@
+#100DaysOfCode
+#100DaysOfX
+#Day2 
+
+Learn how to use pyautogui for screenshots and image recognition. 
+
+Be able to create on-screen automation for many tasks that require user-interface. 
