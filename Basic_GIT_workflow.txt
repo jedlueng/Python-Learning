@@ -1,0 +1,104 @@
+Git 
+
+allows you to keep track of changes made to a project over time.
+
+storing changes 
+
+allowing you to reference them as needed
+
+
+
+git init 
+
+init = initialize 
+
+type git init > this will intialized emply Git repository 
+
+
+Git Workflow 
+
+3 parts 
+
+- A Working Directory 
+	creating,editing,deleting and organizing file 
+- A staging Area  
+	list changes you make to the working directory 
+- A Repository 
+	Git permanenetly stores those changes a different versions of the project. 
+
+git status 
+
+This command show initial commit 
+
+Untracked files 
+
+$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        init_test.rb
+        scene-1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+$ ^C
+
+-----------------------------------------------------------------------------------
+git add
+
+git add {filename} 
+
+This will add new file to the repository 
+
+---------
+
+git diff 
+
+1. Add new text in the file 
+2. use command git diff to show the difference between two command. 
+
+
+---------
+
+git commit 
+
+- commit permanently stores changes from the staging area inside the repository 
+
+git commit -m "{text}" 
+
+- this show more message. 
+
+---------
+git log 
+
+- commits are stored chronologically 
+- can be viewed with git log command 
+
+$ git log
+commit 856d0b9e2b3fe98a4a20cb6eadcb35d124f818c1
+Author: codecademy <ccuser@codecademy.com>
+Date:   Sun Jan 24 09:54:20 2021 +0000
+
+    This is the new message
+$ ^C
+$ 
+
+---------------------------------------------
+
+
+SUMMARY 
+
+- Git = version control system 
+- git init = creates a new Git repository 
+- git status = inspects the contents of the wokring directory and staging area 
+- git add = adds file from the working directory 
+- git diff = shows the difference between working directory and staging area 
+- git commit = permanently stores file changes from the staging area 
+- git log = shows a list of all previous commits. 
+- If there's a bug, you can look bug and see what happen. 
+	Roll back to the time when that bug does not exist
+
+
