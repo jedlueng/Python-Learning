@@ -1,0 +1,17 @@
+#Notes by Jedsada Luengaramsuk jedsada-io 
+#Date: 24 January 2021
+
+
+
+#initiate a folder 
+$  git init 
+
+#Show the track/untrack file
+$ git status
+
+#Add a file to the staging area
+git add {file}
+
+#commit file to repositor 
+git commit -m "{comment}"
+
