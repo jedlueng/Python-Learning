@@ -78,3 +78,101 @@ Find Patterns of Text with Regular Expressions (re module)
 
 - regexs for short.
 - need to import re module
+#Jedsada Luengaramsuk (jedsada-io)
+#27 January 2021
+
+#import re module to start using regular expression
+import re
+
+#Step 1 create a regex object
+
+#Passing string representation of regular expression to re.compile()
+#This is the string representation for 3nums+dash+3nums+dash+4nums
+phoneNumRegex = re,compile(r'\d\d\d-\d\d\d-\d\d\d\d')
+
+
+
+#Step 2 Matching Regex Objects
+#search() method searches the string that match with regex object
+mo = phineNumRegex.search('My number is 415-555-4242')
+print('Phone number found: ' + mo.group())
+
+#Output
+#Phone number found: 415-555-4242
+
+-----------------------------------------------------
+Summary of Regular Expresison Matching
+1. import re
+2. Create a Regex object with re.compile() (need to use a raw string)
+3. match object group() method > to return a string of the actual matched text.
+-----------------------------------------------------
+
+More Pattern Matching with Regular Expressions.
+
+Grouping with Parentheses
+- group() match object method to grab the matching text from just one group.
+- adding () will create grups in the regex
+  - e.g. (\d\d\d)-(\d\d\d-\d\d\d\d)
+
+  #Jedsada Luengaramsuk (jedsada-io)
+  #Date: 28 January 2021
+
+  import re
+
+  #Create regex objectg
+  phoneNumRegex = re.compile(r'(\d\d\d)-(\d\d\d-\d\d\d\d)')
+  mo = phoneNumRegex.search('My number is 415-555-4242')
+
+
+  mo.group(1)
+  #This will show group one (\d\d\d)
+
+  mo.group(2)
+  #This will show group 2 (\d\d\d\d)
+
+  mo.group(0)
+  #This will show no group(\d\d\d)-(\d\d\d-\d\d\d\d)
+
+  mo.group()
+  #This will show no group the same as mo.group(0)
+
+  mo.groups()
+  #This will retrive all the groups ('group1','group2')
+
+
+  areaCode, mainNumber = mo.groups()
+  #This will name areaCode group1, name mainNumber group2
+  print(areaCode)
+  #This will print group1
+  print(mainNumber)
+  #This will print group2
+---------------------------------------------
+
+Matching Multiple Groups with the Pipe
+
+| = pipe
+| can be use anywhere you want to match.
+
+r'Batman|Tina Fey' = match either 'Batman' or 'Tina Fey'
+
+BatmanorTinafey.py
+
+#Jedsada Luengaramsuk (jedsada.io)
+#Date: 28 January 2021
+
+#Regex object match either Batman or Tina Fey
+heroRegex = re.compile(r'Batman|Tina Fey)
+
+#matching object 1
+mo1 = heroRegex.search('Batman and Tina Fey.')
+
+mo.group()
+#This will show 'Batman' because it see Batman before Tina BatmanorTinafey
+
+mo2 = heroRegex.search('Tina Fey and Batman.')
+mo2.group()
+#This will show Tina Fey because it come before Batman
+
+----------------------------------------------
+
+Optional Matching with the Question Mark
