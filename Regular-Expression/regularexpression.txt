@@ -126,7 +126,6 @@ Grouping with Parentheses
 
   mo.group(1)
   #This will show group one (\d\d\d)
-
   mo.group(2)
   #This will show group 2 (\d\d\d\d)
 
@@ -176,3 +175,52 @@ mo2.group()
 ----------------------------------------------
 
 Optional Matching with the Question Mark
+- ? flags the group.
+- (wo)? part means that the pattern wo is an optional group
+- regex matches both 'Batwoman' and 'Batman'
+
+bat(wo)?man.py
+
+#Jedsada Luengaramsu jedsada-io
+#29 January 2021
+
+#Create a regex object with ()?
+batRegex = re.compile(r'Bat(wo)?man')
+
+
+mo1 = batRegex.search('THe Adventures of Batman')
+
+
+mo1.group()
+#This will show Batman because Batman is founded in this text
+
+mo2= batRegex.search('THe Adventures of Batwoman')
+mo2.group()
+#This one will show Batwoman because it's found.
+
+------------------------------------------------
+
+Matching Zero or More with the Star
+- * (star or asterisk)
+- match zero or more
+- group that precedes the star can occur any number of times in the text.
+#Jedsada LUengaramsuk jedsada-io
+#29 January 2021
+
+import re
+
+#* mean match zero or more
+batRegex = re.compile(r'Bat(wo)*man')
+
+mo1 = batRegex.search('The Adventures of Batman')
+mo1.group()
+#Batman
+
+mo2 = batRegex.search('The Adventures of Batwoman')
+mo2.group()
+#Batwoman
+
+mo3 = batRegex.search('The Adventures of Batwowowowoman')
+#Batwowowwowoman
+#This will match because of * match one or more.
+--------------------------------------------------
