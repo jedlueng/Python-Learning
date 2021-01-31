@@ -224,4 +224,53 @@ mo3 = batRegex.search('The Adventures of Batwowowowoman')
 #Batwowowwowoman
 #This will match because of * match one or more.
 --------------------------------------------------
-Matching One or More with the Plus 
+Matching One or More with the Plus
+- + means
+- match one or more
+- The group need to appear in matching string
+
+(wo)+.py
+
+#Created by Jedsada Luengaramsuk
+#Date: 31 January 2021
+
+#Regex object match one or more on (wo)
+batRegex = re.compile(r'Bat(wo)+man')
+
+mo1= batRegex.search('The Adventures of Batwoman')
+mo1.group()
+#This will show Batwoman because it appear in the text
+
+mo2 = batRegex.search('The Adventures of Batwowowowoman')
+mo.group()
+#THis will show Batwowowowoman because it appear more than one time\
+
+mo3 = batRegex.search('The Adventures of Batman')
+mo3 == None
+#This won't appear because (wo) does not appear in this text.
+--------------------------------------------------
+Matching Specific Repetitions with Curly Brackets
+- (optional object){number of time it need to appear}
+
+haha.py
+#Jedsada Luengaramsuk jedsada-io
+import re
+
+
+#Create regex object. Search for hahaha
+haRegex = re.compile(r'(ha){3}')
+
+mo1=haRegex.search('HaHaHa')
+mo1.group()
+#Show HaHaHa (Perfect matched)
+
+mo2 = haRegex.search('Ha')
+mo2 = None
+#Return True
+
+#Summary
+#()is for the text {} is for the number of times it must appear
+--------------------------------------------------
+
+Greedy and Nongreedy Matching
+- ? declear nongreedy match
