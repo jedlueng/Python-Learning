@@ -14,4 +14,4 @@ mo.group()
 
 mo3 = batRegex.search('The Adventures of Batman')
 mo3 == None
-#This won't appear because (wo) does not appear in this text. 
+#This won't appear because (wo) does not appear in this text.
