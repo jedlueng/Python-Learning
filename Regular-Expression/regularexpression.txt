@@ -322,4 +322,231 @@ Summary
 
 
 -------------------------------------------------
-Character Classes 
+Character Classes
+
+Common Character classes
+
+\d = num
+\D != num
+\w = letter, num, _ and word
+\W != letter,num, _
+\s = space,tab,newline (space)
+\S != space,tab,newline (space)
+
+xmasRegex.py
+
+#Jedsada Luengaramsuk jedsada-io
+#2 Febuary 2021
+
+import re
+
+#Regex object of one or more num , space then one or more word
+xmasRegex = re.compile(r'\d+\s\w+'')
+
+
+xmasRegex.findall('12 drummers, 11 pipers, 10 lords, 9 ladies, 8 m
+
+#This will show all because it's fit the condition above
+
+---------------------------------------------------------
+Making Your Own Character Classes
+
+- when you want to match character but those default digit are too board
+- using brackets []
+- [aeiouAEIOU] < this will match only this
+- [a-zA-Z0-9] is also work
+owncharacterclass.py
+
+#Jedsada Luengaramsuk jedsada-io
+#2 Febuary 2021
+
+import re
+
+#regex object where match only aeiouAEIOU
+consonantRegex =re.compile(r'[^aeiouAEIOU]')
+
+consonantRegex.findall('RoboCop eats baby food. BABY FOOD')
+#This will be matched
+#['R', 'b', 'c', 'p', ' ', 't', 's', ' ', 'b', 'b', 'y', ' ', 'f', 'd', '.', '', 'B', 'B', 'Y', ' ', 'F', 'D', '.']
+--------------------------------------------------------------
+The Caret and Dollar Sign Characters
+- ^ caret at the start off a regex
+  - a match must occur at the beginning of the searched text
+- $ dollar sign at the end of regex to incicate the string must end with this regex pattern
+- ^ and $ together to indicate the start and the end
+
+CaretandDollar.py
+
+#Jedsada Luengaramsuk jedsada-io
+#2 Febuary 2021
+
+import re
+
+#regex object start with Hello
+beginsWithHello = re.compile(r'^Hello')
+beginsWithHello.search('Hello world!')
+#This will matched the string
+
+#However this will not matched
+beginsWithHello.search('He said hello.') == None
+
+
+
+
+
+#This is the regex object that end with number
+endsWithNumber = re.compile(r'\d$')
+
+#This will matched
+endsWithNumber.search('Your number is 42')
+
+endsWithNumber.search('Your number is forty two.') == None
+#This will return true
+
+
+#Regex that both begin and end with one or more num Characters
+#With one or more num chars
+wholeStringIsNum = re.compile(r'^\d+$')
+wholeStringIsNum.search('1234567890')
+#This one will match
+
+#This one won't because it's contain chars
+wholeStringIsNum.search('12345xyz67890') == None
+
+#This one won't because it contain space
+wholeStringIsNum.search('12 34567890') == None
+----------------------------------------------------------
+
+The Wildcard Character
+- . (or dot)
+- called wildcard
+- matched any character except for a newline.
+
+atRegex.py
+#Jedsada LUENGARAMSUK jedsada-io
+#Date: 2 Febuary 2021
+
+import re
+
+atRegex = re.compile(r'.at')
+atRegex.findall('The cat in the hat sat on the flat mat.')
+#All matched because it's not newline chars
+
+
+Matching everything with Dot-Star
+-(.*)
+- anything
+- anything except a newline
+
+#Jedsada Luengaramsuk jedsada-io
+#2 Feb 2021
+import re
+
+#Regex object where matched First Name then everything except new line. Also the name as  last name
+nameRegex = re.compile(r'First Name: (.*) Last Name: (.*)'')
+
+mo = nameRegex.search('First Name: Jedsada Last Name: LUENGARAMSUK')
+
+mo.group(1)
+#Jedsada
+
+mo.group(2)
+#LUENGARAMSUK
+
+Match everything in a non-greedy way
+- (.*?)
+
+everythingGreedyvsNongreedy.py
+#Jedsada LUEGNARAMSUK jedsada-io
+#2 Febuary 2021
+
+import re
+
+#Match everything in a non greedy way
+nongreedyRegex = re,compile(r'<.*?>'')
+
+mo = nongreedyRegex.search('<To serve man> for dinner.>')
+
+mo.group()
+#'<To serve man> for dinner.>'
+
+
+
+Matching Newlines with the Dot Character
+- match all character including newline
+
+newlineRegex.py
+
+#Jedsada LUengaramsuk jedsada-io
+#Date: 2 Febuary 2021
+
+import re
+
+
+#This is everything excluding newline
+noNewLineRegex = re.compile('.*')
+noNewLineRegex.search('Serve the public trust. \nProtect the innocent. \mUphold the law.').group()
+
+#'Serve the public trust'
+
+
+
+
+
+#This is everything including newline
+#re.DOTALL
+noNewLineRegex = re,compile('.*', re.DOTALL)
+newlineRegex.search('Serve the public trust.\nProtect the innocent.
+\nUphold the law.').group()
+
+#'Serve the public trust.\nProtect the innocent.\nUphold the law.'
+---------------------------------------------------------------------
+
+Regex Symbols summary
+
+- The ? matches zero or one of the preceding group.
+- The * matches zero or more of the preceding group.
+- The + matches one or more of the preceding group.
+- The {n} matches exactly n of the preceding group.
+- The {n,} matches n or more of the preceding group.
+- The {,m} matches 0 to m of the preceding group.
+- The {n,m} matches at least n and at most m of the preceding group.
+- {n,m}? or *? or +? performs a nongreedy match of the preceding group.
+- ^spam means the string must begin with spam.
+- spam$ means the string must end with spam.
+- The . matches any character, except newline characters.
+- \d , \w , and \s match a digit, word, or space character, respectively.
+- \D , \W , and \S match anything except a digit, word, or space character,
+respectively.
+- [abc] matches any character between the brackets (such as a, b, or c).
+- [^abc] matches any character that isn’t between the brackets.
+---------------------------------------------------------------------
+Case-Insensitive Matching
+- second parameter on regex object
+- (,re.I)
+- Ignorecase
+
+
+robocop.py
+#Jedsada Luengaramsuk jedsada-io
+#2 Febuary 2021
+
+import re
+
+#Match all case
+
+robocop = re.compile(r'robocop',re.I)
+robocop.search('RoboCop is part man, part machine, all cop.').group()
+#RoboCop
+
+robocop.search('ROBOCOP protects the innocent.').group()
+#ROBOCOP
+
+robocop.search('Al, why does your programming book talk about robocop so much?').group()
+#robocop
+--------------------------------------------------------------------
+Substituting Strings with the sub() Method
+- sub() method
+- passed two arguments
+- first argument > a string to replace any matches
+- second argument > a string for the regular expression
