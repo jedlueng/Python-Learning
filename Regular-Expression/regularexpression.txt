@@ -550,3 +550,54 @@ Substituting Strings with the sub() Method
 - passed two arguments
 - first argument > a string to replace any matches
 - second argument > a string for the regular expression
+
+nameRegexsub.py
+#Jedsada Luengaramsuk jedsada-io
+#3 February 2021
+
+import re
+
+namesRegex = re.compile(r'Agent \w+')
+
+namesRegex.sub('CENSORED','Agent Alice gave the secret documents to Agent Bob.')
+#'CENSORED gave the secret documents to CENSORED.'
+
+
+agentNamsRegex = re.compile(r'Agent (\w)\w*')
+agentNamesRegex.sub(r'\1****', 'Agent Alice told Agnt Carol that Agent Eve knew Agent Bob was a double agent.')
+#A**** told C**** that E**** knew B**** was a double agent.'
+
+
+------------------------------------------------------
+Managine Complex Regexes
+- compilcated text patterns require long , regex.
+- use verbose mode instead
+- re.VERBOSE as a second argument to re.compile()
+
+Normal re.compile()
+
+phoneRegex = re.compile(r'((\d{3}|\(\d{3}\))?(\s|-|\.)?\d{3}(\s|-|\.)\d{4} (\s*(ext|x|ext.)\s*\d{2,5})?)')
+
+re.compile()+ re.VERBOSE
+phoneRegex = re.compile(r'''(
+  (\d{3}|\(\d{3}\))? # area code
+  (\s|-|\.)?  # separator
+  \d{3}      # first 3 digits
+  (\s|-|\.)   # separator
+  \d{4}       # last 4 digits
+  (\s*(ext|x|ext.)\s*\d{2,5})?  # extension
+  )''', re.VERBOSE)
+
+- Allow you to have a new comment with multiple newline
+--------------------------------------------------------
+Combining re.IGNORECASE,re.DOTALL, and re.VERBOSE
+- combining all with | character
+- if you want to use many option at the same time.
+
+example
+
+#2 options at the same time
+someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL)
+
+#3 options at the same time
+someRegexValue = re.compile('foo', re.IGNORECASE|re.DOTALL|re.VERBOSE)
