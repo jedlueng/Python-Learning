@@ -1,4 +1,4 @@
-#Jedsada Luengaramsuk jedsada-io 
+#Jedsada Luengaramsuk jedsada-io
 #2 Febuary 2021
 
 import re

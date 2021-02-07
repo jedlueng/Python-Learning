@@ -205,6 +205,8 @@ Matching Zero or More with the Star
 - match zero or more
 - group that precedes the star can occur any number of times in the text.
 #Jedsada LUengaramsuk jedsada-io
+
+StarbatRegex.py
 #29 January 2021
 
 import re
@@ -225,7 +227,7 @@ mo3 = batRegex.search('The Adventures of Batwowowowoman')
 #This will match because of * match one or more.
 --------------------------------------------------
 Matching One or More with the Plus
-- + means
+- + 
 - match one or more
 - The group need to appear in matching string
 
@@ -438,6 +440,7 @@ Matching everything with Dot-Star
 - anything
 - anything except a newline
 
+Dot-star.py
 #Jedsada Luengaramsuk jedsada-io
 #2 Feb 2021
 import re

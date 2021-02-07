@@ -8,7 +8,7 @@ import re
 
 #Passing string representation of regular expression to re.compile()
 #This is the string representation for 3nums+dash+3nums+dash+4nums
-phoneNumRegex = re,compile(r'\d\d\d-\d\d\d-\d\d\d\d')
+phoneNumRegex = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d')
 
 
 
