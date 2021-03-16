@@ -1,0 +1,101 @@
+#Created by Jedsada Luengaramsuk 16/03/2021
+#With automated boring stuff with python book
+
+- Use python to create, read and save files on the hardrive 
+
+Files and FIle Paths 
+- Filename e.g. project.docx
+- Path e.g. C:\Users\jedsada\Documents.  (Get in to folders/directories)
+    - C:\ = window style root 
+
+{FIle-hierachy.png}
+
+Backslash on Windows > Forward Slash on OS X and Linux 
+- On windows paths = \ (Backslashes)
+- OSX and Linux = / (Forward slash)
+
+
+os.path.join() 
+> strip that return a string with a file with the correct path
+
+Linix, mac and windows would be different 
+_____________________________
+#This script change tuple to a string with the right file path
+
+import os 
+
+os.path.join('usr', 'bin', 'spam')
+
+'usr\\bin\\spam'
+_____________________________
+
+os.path.join() is helpful when you need to create string for filenames 
+
+
+
+
+____________________________________
+#joins name from a list of ile names to the end of a folder's name
+
+import os 
+
+
+myFiles = ['accounts.txt', 'details.csv', 'invite.docx']
+
+for filename in myFiles: 
+    print(os.path.join('C:\\Users\\asweigart', filename))
+
+C:\Users\asweigart\accounts.txt
+C:\Users\asweigart\details.csv
+C:\Users\asweigart\invite.docx
+
+__________________________________
+
+
+The Current Working Directory 
+- Current working directory = cwd 
+- get it by 
+- os.getcwd() 
+
+import os 
+
+os.getcwd() 
+#This will print current working directory 
+
+Change directory 
+os.chdir(path)
+
+_____________________________
+import os 
+
+#get working directory 
+od.getcwd() 
+
+#change working directory
+os.getcwd(path)
+
+#Show working directory again 
+os.getcwd() 
+
+
+
+ABSOLUTE vs RELATIVE PATH 
+
+- absolute path > begins with the root folder 
+- relative path > relative to the program's current working directory 
+
+{relativevsabsolute}
+
+.\ > go forth 
+..\ > go back 
+
+
+
+{Today stop at page 176 > Creating New Folders with os.makedirs()}
+
+
+
+
+
+
+
