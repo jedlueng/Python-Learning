@@ -94,6 +94,11 @@ ABSOLUTE vs RELATIVE PATH
 {Today stop at page 176 > Creating New Folders with os.makedirs()}
 
 
+What I learned 
+os.path.join()
+os.getcwd(path)
+Absolute vs relative 
+
 
 
 
