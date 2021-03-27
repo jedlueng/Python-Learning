@@ -103,4 +103,131 @@ Absolute vs relative
 
 
 
+Creating New Folders with os.makedirs() 
+
+os.makedirs() 
+
+_____________________________
+
+import os 
+
+#Create folders on this path 
+os.makedirs(''C:\\delicious\\walnut\\waffles')
+
+
+{walnut}
+
+
+
+
+The os.path Module 
+- related to filenames and file paths 
+- http://docs.python.org/3/library/os.path.html.
+
+
+
+Handling Absolute and Relative Paths 
+- os.path.abspath(path) > return a string of the absolute path into an absolute one 
+- os.path.isabs(path) > return TRUE if argument is an absolute path 
+- os.path.relpath(path,start) > return a string of relative path from start to ppath 
+- os.path.dirname() > return a string of everything that comes before the last slash in the path argument 
+- os.path.basename(path) > return a string that comes after the last slash 
+
+
+{os.path}
+
+{os.path.relpath}
+
+
+Page 178 date 25/03/2021
+
+
+26/03/2021
+
+os.path.dirname(path) return a string of everything that comes before the last slash in the path argument
+
+{basename-dirname}
+
+{basename-dirname-example}
+
+
+To combine path name and base name together 
+
+> os.path.split() 
+
+{os.path.split-example}
+
+
+
+
+
+_____________________________
+Finding File Sizes and Folder Contents 
+
+- Gather info about files and folders 
+
+- os.path.getsize(path) > return the size in bytes 
+- os.listdir(path) > show filename in strings for each file (same as ls)
+
+
+{getsize-listdir-example}
+
+
+
+Find the total size of all files in this directory 
+- use os.path.getsize() and os.listdir() together 
+
+{gettotalsize}
+
+- loop each file name 
+- use os.path.join to join path with filename 
+- combine everything in total size 
+
+
+
+_____________________________
+Checking Path Validity 
+- to check path and prevent error 
+- os.path.exists(path) > return TRUE if files exist 
+- os.path.isfile(path) > return True if path argument exist and is a file 
+- os.path.isdir(path) > return True if the path argument exists and is a folder
+
+
+{os.path.check}
+
+
+_____________________________
+
+THe File Reading/writing Process 
+- apply to plain text file 
+- shelve module 
+- open() > return a file object 
+- read() write() on the file object 
+- close() on the file object 
+
+
+
+
+[page181 after one pomodoro > quite fast huh 13.56]
+
+
+Open() > open file 
+
+- open(path)
+- can put absolute or relative path 
+- returns a File object 
+- Creating hello.txt 
+{openhello}
+- This will open a file in reading plain text mode 
+- When you want to read and write  > you need to call hello 
+
+
+
+_____________________________
+Reading the Contents of Files 
+
+
+
+
+
 
