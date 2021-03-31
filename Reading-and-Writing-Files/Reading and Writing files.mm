@@ -1,0 +1,85 @@
+<map version="1.0.1">
+<!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
+<node CREATED="1616901051664" ID="ID_551100241" MODIFIED="1616901298304" TEXT="Reading and Writing files">
+<node CREATED="1616901266088" FOLDED="true" ID="ID_410100340" MODIFIED="1617003067597" POSITION="right" TEXT="shelve module ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+  </body>
+</html></richcontent>
+<node CREATED="1616916843998" ID="ID_871332315" MODIFIED="1616916848155" TEXT="Process">
+<node CREATED="1616916922877" ID="ID_1548235861" MODIFIED="1616916930000" TEXT="import shelve"/>
+<node CREATED="1616916930458" ID="ID_1293999053" MODIFIED="1616916946021" TEXT="object = shelve.open(&apos;file&apos;) "/>
+<node CREATED="1616916946579" ID="ID_938662815" MODIFIED="1616916959394" TEXT="Make change with dictionary "/>
+<node CREATED="1616917220589" ID="ID_1280704302" MODIFIED="1616917232383" TEXT=".close()"/>
+</node>
+<node CREATED="1616916849517" ID="ID_1485881194" MODIFIED="1616916869815" TEXT="Save variables in python program with binary shelffile"/>
+<node CREATED="1616917235982" ID="ID_1578288019" MODIFIED="1616917243937" TEXT="keys() and values() also work"/>
+</node>
+<node CREATED="1616901270928" FOLDED="true" ID="ID_911286119" MODIFIED="1617003068417" POSITION="right" TEXT="pprint">
+<node CREATED="1616914986464" ID="ID_638273610" MODIFIED="1616915000317" TEXT="pprint.pprint() ">
+<node CREATED="1616915026202" ID="ID_1491350647" MODIFIED="1616915044530" TEXT="pretty print content of a list or directory "/>
+</node>
+<node CREATED="1616915001225" ID="ID_1545373382" MODIFIED="1616915006407" TEXT="pprint.pformat()">
+<node CREATED="1616915050810" ID="ID_1648781445" MODIFIED="1616915059460" TEXT="return the same text as a string "/>
+</node>
+</node>
+<node CREATED="1616901249933" FOLDED="true" ID="ID_37832315" MODIFIED="1617003069533" POSITION="right" TEXT="Reading/Writing Processes">
+<node CREATED="1617002960054" ID="ID_1187708407" MODIFIED="1617002962914" TEXT="open()">
+<node CREATED="1617002978424" ID="ID_257914652" MODIFIED="1617002985936" TEXT="object = open(file) "/>
+</node>
+<node CREATED="1617002963295" ID="ID_522973170" MODIFIED="1617002970661" TEXT="read(), write()">
+<node CREATED="1617002997168" ID="ID_1119866725" MODIFIED="1617003014962" TEXT="content = file.read() "/>
+<node CREATED="1617003020718" ID="ID_1157708212" MODIFIED="1617003029240" TEXT="readlines() &gt; read each line"/>
+</node>
+<node CREATED="1617002971221" ID="ID_35408950" MODIFIED="1617002975414" TEXT="close() ">
+<node CREATED="1617003046633" ID="ID_1881188612" MODIFIED="1617003053507" TEXT="close and save the file"/>
+</node>
+</node>
+<node CREATED="1616901239484" FOLDED="true" ID="ID_45598345" MODIFIED="1617003073678" POSITION="right" TEXT="os module">
+<node CREATED="1616925277009" FOLDED="true" ID="ID_454308210" MODIFIED="1617003070656" TEXT="os.path.join()">
+<node CREATED="1616925306564" ID="ID_908786109" MODIFIED="1616925324325" TEXT="return path from list/string (correct os) "/>
+</node>
+<node CREATED="1616925336861" FOLDED="true" ID="ID_1573834126" MODIFIED="1617003071178" TEXT="os.getcwd() ">
+<node CREATED="1616925380123" ID="ID_253103884" MODIFIED="1616925391691" TEXT="current working directory = cwd"/>
+<node CREATED="1616925392979" ID="ID_1059278608" MODIFIED="1616925399112" TEXT="os.getcwd() "/>
+</node>
+<node CREATED="1616925401770" FOLDED="true" ID="ID_843896599" MODIFIED="1617003072324" TEXT="os.chdir(path) ">
+<node CREATED="1616925412003" ID="ID_1517249954" MODIFIED="1616925415156" TEXT="change directory "/>
+</node>
+<node CREATED="1616925446119" FOLDED="true" ID="ID_1588528125" MODIFIED="1617003072894" TEXT="os.makedirs() ">
+<node CREATED="1616925459648" ID="ID_253755471" MODIFIED="1616925466429" TEXT="making directory/folders "/>
+</node>
+</node>
+<node CREATED="1616901228747" FOLDED="true" ID="ID_178078199" MODIFIED="1617003076788" POSITION="right" TEXT="os.path.module">
+<node CREATED="1616925541114" ID="ID_658553018" MODIFIED="1616925546693" TEXT="related to filenames and file paths "/>
+<node CREATED="1616925547207" FOLDED="true" ID="ID_1977321480" MODIFIED="1617003075881" TEXT="Headling Absolute and Relative Paths ">
+<node CREATED="1616925561393" ID="ID_584631974" MODIFIED="1616925643494" TEXT="os.path.abspath(path) ">
+<node CREATED="1616925675979" ID="ID_1191677427" MODIFIED="1616925687474" TEXT="return a string of the relative path into an absolute one "/>
+</node>
+<node CREATED="1616925644108" ID="ID_739977797" MODIFIED="1616925649828" TEXT="os.path.isabs(path)">
+<node CREATED="1616925689248" ID="ID_822881095" MODIFIED="1616925697115" TEXT="return TRUE if argument is an absolute path"/>
+</node>
+<node CREATED="1616925650273" ID="ID_1193592924" MODIFIED="1616925658501" TEXT="os.path.relpath(path,start)">
+<node CREATED="1616925699286" ID="ID_1874522075" MODIFIED="1616925711718" TEXT="return a string of relative path from start to path"/>
+</node>
+<node CREATED="1616925658892" ID="ID_757248688" MODIFIED="1616925665585" TEXT="os.path.dirname() ">
+<node CREATED="1616925715472" ID="ID_1148109855" MODIFIED="1616925726914" TEXT="return a string of everything that comes before the last slash in the path "/>
+</node>
+<node CREATED="1616925665924" ID="ID_536567807" MODIFIED="1616925671407" TEXT="os.path.basename()">
+<node CREATED="1616925728806" ID="ID_15001276" MODIFIED="1616925736098" TEXT="return a string that  comes after the last slash"/>
+</node>
+</node>
+</node>
+<node CREATED="1616901214398" FOLDED="true" ID="ID_964661042" MODIFIED="1617003079899" POSITION="right" TEXT="Files and File Paths">
+<node CREATED="1616901329599" ID="ID_23053780" MODIFIED="1616901502059" TEXT="Absolute path">
+<node CREATED="1617001326235" ID="ID_575138577" MODIFIED="1617001331210" TEXT="begins with the root folder "/>
+</node>
+<node CREATED="1616901336671" ID="ID_1831899390" MODIFIED="1616901497787" TEXT="Relative path">
+<node CREATED="1617001333099" ID="ID_1030004792" MODIFIED="1617001342017" TEXT="relative to the program&apos;s current working directory "/>
+</node>
+</node>
+</node>
+</map>
