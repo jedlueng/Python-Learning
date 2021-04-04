@@ -1,0 +1,114 @@
+Start 4/4/2021
+By Jedsada Luengaramsuk
+
+Organizing Files 
+- Copies pdf in every sub-folders 
+- Remove zeroes in filenames 
+- Compress several folders into on ZIP 
+
+
+
+The shutil Module 
+- copy,move, rename and delete files 
+
+
+Copying Files and Folders 
+- shutil.copy(source, destination)
+    copy file at the path source to the destination 
+    (string)
+
+
+{shutil.copy}
+
+#Copy spam.txt to delicious directory 
+#copy eggs.txt to delicious\\eggs2.txt  ***Change file name to eggs2.txt
+
+
+shutil.copytree(source,destination) > copy entire folder and every folder and file contained in it
+
+
+
+Moving and Renaming Files and Folders 
+
+
+shutil.move(source,destination)
+
+
+{shutil.move} 
+
+
+
+{shutil.move2}
+#The source file is move and rename 
+
+
+{shutil.move3}
+#bacon.txt is rename to eggs because there's no destination folder
+
+
+
+
+Permanently Deleting Files and Folders 
+
+to delete single file or emply folders 
+    os module is used 
+
+os.unlink(path) > delete file path 
+os.rmdir(path) < delete the folder at path 
+shutil.rmtree(path) > remove the folder at path, and all files and folders it contains 
+
+
+
+{ endswith}
+
+#Use for loop, if filename endswith .rxt, delete it 
+
+
+
+
+
+
+Safe Deletes with the send2trash Module 
+
+- shutil.rmtree() = irreversibly deletes files  and folders. 
+    Dangerous to use 
+
+- send2trash > send folders and files to computer's trash 
+
+{send2trash}
+
+#send2trash.send2trash(file)
+
+
+
+
+_____________________________
+
+ Walking a Directory Tree 
+
+- for rename everyfile and every subfolder of that folder 
+
+{directory-Tree}
+
+
+
+
+os.walk() 
+
+
+{oswalk1()}
+
+{oswalk2()}
+
+#Use loop statement to walk a directory tree 
+#range() functionn  to walk over a range of numbers 
+#os.walk() will return 3 values 
+    1. A string of the current folder's name 
+    2.A list of strings of the folders in the current folder 
+    3.. A list of strings of the files in the current folder 
+
+
+{os.walk-result}
+
+#os.walk() returns lists of strings for the subfolder and filename 
+
