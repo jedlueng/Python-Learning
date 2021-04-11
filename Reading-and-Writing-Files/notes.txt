@@ -226,8 +226,70 @@ Open() > open file
 _____________________________
 Reading the Contents of Files 
 
+- read file by using read() method on openobject 
+- helloContent = helloFile.read() 
+{readit}
+
+- readlines() > get a list of string values from the file 
+- \n except the last line of the file
+{readline-example}
+
+
+_____________________________
+
+Writing to Files 
+
+- python allow file writing same as print() 
+- You need to open write plain text mode 
+- passing 'w' to open 
+
+
+{baconfile}
+
+
+[pomodoro 2 26/03/2021 Quite good at the page 184]
 
 
 
+Saving Variables with the shelve Module 
+- save variables in your python programs to binary shelf files 
+- shelve module
+- save setting and load again 
+
+{shelve}
+
+- first import shelve 
+- shelve.open(path) > store it in shelve value 
+- YOu can make change to the shelf > like dictionary 
+- Then we call close on shelffile 
+- 3 files will be created mydata.bak, mydata.dat, and mydata.dir
 
 
+{shelve2}
+
+retrive data by open shelve module again 
+
+
+{shelve3}
+- keys() and values() also work 
+
+Summary 
+- IF you want to save data using python >>>> Use shelve module
+
+
+
+Saving Variables with the pprint.pformat() 
+- pprint.pprint() > pretty print content of a list or dictionry 
+- pprint.pformet() > return the same text as a string. 
+- easier to read >+ give you a string that you can write to .py file. 
+
+
+
+[27/03/2021 pomodoro 1 page 184-185]
+
+{pprint}
+
+
+You can import py file to another file in order to use it 
+
+{mycats}

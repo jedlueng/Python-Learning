@@ -112,3 +112,65 @@ os.walk()
 
 #os.walk() returns lists of strings for the subfolder and filename 
 
+
+
+
+
+_____________________________
+
+11/4/2021
+
+Compressing Files with the zipfile Module 
+
+- reduce size 
+- can contain multiple files and subfolders. 
+archive file  
+
+Reading ZIP Files 
+
+1. Create a ZipFile object (zipfile.Zipfile(file))
+2. Use method on the zipfile 
+
+
+{zip1}
+
+#zipfile.namelist() > list content of this zipfile object 
+#fileobject.file_zize > fileobject.compress_size = find size 
+
+1.calculates efficientcy of zip file 
+
+#zipfile is the same as file, you need to open and close. 
+
+
+
+
+
+Extracting from ZIP Files 
+
+
+{extractall}
+
+#zipfileobject.extractall() > extracts all the files and folders to current working directory
+#or .extractall(path)
+
+
+
+
+{extract}
+
+#zipfile.extract(file,path)
+
+#This will extract a single file 
+
+
+
+
+Creating and Adding to ZIP files 
+
+{zip2}
+
+1. open Zipfile object with write mode 
+2. zipfile.write(file, compress_type)
+    compress_type is the type of algorithum 
+
+#This will create a new ZIP file name new.zip that has the compressed contetnts of spam.txt
