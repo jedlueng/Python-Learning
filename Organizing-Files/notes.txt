@@ -39,8 +39,8 @@ shutil.move(source,destination)
 
 
 {shutil.move2}
-#The source file is move and rename 
-
+#The source file is move and rename
+ 
 
 {shutil.move3}
 #bacon.txt is rename to eggs because there's no destination folder
