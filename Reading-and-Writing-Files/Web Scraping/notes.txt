@@ -1,0 +1,17 @@
+14/4/2021 
+
+Web Scraping 
+
+- using a program to download a nd process content from the web 
+
+Module 
+- webbrowser > open browser  
+- Requests > Downloads files and webpages 
+- Beautiful Soup > Parses HTML 
+- Selenium > launches and control web browser (fill in forms and simulate mouse)
+
+
+Project 1 : maplt.py with the webbrowser module 
+
+webbrowser.open('URL') < lauch a new brower to a specified URL
+

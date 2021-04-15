@@ -1,0 +1,69 @@
+14/4/2021 
+
+Web Scraping 
+
+- using a program to download a nd process content from the web 
+
+Module 
+- webbrowser > open browser  
+- Requests > Downloads files and webpages 
+- Beautiful Soup > Parses HTML 
+- Selenium > launches and control web browser (fill in forms and simulate mouse)
+
+
+________________________________________________________
+
+Project 1 : maplt.py with the webbrowser module 
+
+webbrowser.open('URL') < lauch a new brower to a specified URL
+
+
+{webbrowser.open()}
+
+#This will return True and open browser with URL 
+
+
+
+Goal of this project 
+- Find street address and open google map 
+
+
+URL: https://www.google.com/maps/place/870+Valencia+St,+San+Francisco,+CA+94110,+USA/@37.7589579,-122.4238514,17z/data=!3m1!4b1!4m5!3m4!1s0x808f7e3dae0fc797:0x26acf7c8a5797e94!8m2!3d37.7589579!4d-122.4216627
+
+
+
+Change list of string to string 
+
+{listofstring}
+
+
+
+{mapit.py}
+
+
+{manual vs mapit.py}
+
+________________________________________________________
+
+requests module > downloading files from the web 
+
+- response_object = requests.get('URL') > download object 
+- Response object > contains the response that web server gave for your request
+- you also need to import requests > or install pip 
+
+
+{gettext}
+
+________________________________________________________
+
+Checking for Errors 
+
+- raise_for_status() method on the Response object 
+
+{status}
+
+# always do this if you want to make sure that you download is working 
+
+
+________________________________________________________
+Saving Downloaded Files to the Hard Drive 
