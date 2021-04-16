@@ -1,0 +1,246 @@
+14/4/2021 
+
+Web Scraping 
+
+- using a program to download a nd process content from the web 
+
+Module 
+- webbrowser > open browser  
+- Requests > Downloads files and webpages 
+- Beautiful Soup > Parses HTML 
+- Selenium > launches and control web browser (fill in forms and simulate mouse)
+
+
+________________________________________________________
+
+Project 1 : maplt.py with the webbrowser module 
+
+webbrowser.open('URL') < lauch a new brower to a specified URL
+
+
+{webbrowser.open()}
+
+#This will return True and open browser with URL 
+
+
+
+Goal of this project 
+- Find street address and open google map 
+
+
+URL: https://www.google.com/maps/place/870+Valencia+St,+San+Francisco,+CA+94110,+USA/@37.7589579,-122.4238514,17z/data=!3m1!4b1!4m5!3m4!1s0x808f7e3dae0fc797:0x26acf7c8a5797e94!8m2!3d37.7589579!4d-122.4216627
+
+
+
+Change list of string to string 
+
+{listofstring}
+
+
+
+{mapit.py}
+
+
+{manual vs mapit.py}
+
+________________________________________________________
+
+requests module > downloading files from the web 
+
+- response_object = requests.get('URL') > download object 
+- Response object > contains the response that web server gave for your request
+- you also need to import requests > or install pip 
+
+
+{gettext}
+
+________________________________________________________
+
+Checking for Errors 
+
+- raise_for_status() method on the Response object 
+
+{status}
+
+# always do this if you want to make sure that you download is working 
+
+
+________________________________________________________
+Saving Downloaded Files to the Hard Drive
+
+15/4/2021
+
+- save web page to a file 
+- open() and write() method 
+- Write binary data (Unicode encoding) 
+
+
+{res}
+
+#After getting text from site 
+#create new file in wb mode 
+#use loop in res.iter_content() to write it into the files 
+
+- iter_content() > returns 'chunks' of the content on each iteration through the loop. 
+
+
+{res2}
+
+________________________________________________________
+
+HTML 
+
+- Hypertext Markup Language 
+- webpages are written in 
+• http://htmldog.com/guides/html/beginner/
+• http://www.codecademy.com/tracks/web/
+• https://developer.mozilla.org/en-US/learn/html/
+
+
+Viewing source of HTML 
+- View Source 
+- right-click then view source
+- developer tools on Chrome
+
+Use Google developer tool to inspect element 
+{feedman}
+
+
+Parsing HTML with the BeautifulSoup Module
+
+- Beautiful Soup 
+    module for extracting information from an HTML 
+- bs4 > Beautiful soup version 4 
+
+{bsoup}
+
+#BeautifulSoup object will be stored in noStarchSoup 
+
+
+#Or open file from computer 
+
+{bsoup2}
+
+
+Finding an Element with the select() Method 
+
+- soup.select('')
+
+
+{bselect}
+
+#Select method will return a list of Tag objects 
+#can be pass to str() 
+
+{beselect2}
+
+
+store selected tag object in elems 
+
+
+
+
+{bselect3}
+
+#p to find paragraph <p> 
+#pElems = list of the strign with p 
+
+
+Getting Data from an Element's Attributes
+
+get() method for tag objects > access attribute values from an element 
+
+{bs44}
+
+
+________________________________________________________
+
+Project: 'I'm Feeling Lucky'
+
+Goal 
+1.Gets search keywords from the command line arguments.
+2.Retrieves the search results page.
+3.Opens a browser tab for each result.
+
+This means your code will need to do the following:
+1.Read the command line arguments from sys.argv.
+2.Fetch the search result page with the requests module.
+3.Find the links to each search result.
+4.Call the webbrowser.open() function to open the web browser.
+5.Open a new file editor window and save it as lucky.py.
+
+
+
+{lucky.py}
+
+________________________________________________________
+
+Project: Downloading All XKCD comics 
+
+- No need to navigate manually and save each one 
+- XKCD > geek webcomics 
+- http://xkcd.com/ 
+
+Goal 
+- Loads the XKCD home page. 
+- Saves the comic image on that page. 
+- Follows the Previous Comic link.
+- Repeats until it reaches the first Comic.
+
+Code need to do 
+- Download pages with the requests module 
+- Find the URL of the comic image > using beautiful soup. 
+- Download and save comic image to the hard drive with iter_content() 
+- Find the URL of the Previous Comic link and repeate 
+
+
+downloadXkcd.py 
+
+
+________________________________________________________
+
+Controlling the Browser with the selenium Module 
+
+- selenium module 
+    lets Python control the browser 
+    Clicking links + filling in login information 
+
+
+
+Page 257
+{sele1}
+
+#browser = webseiver.Firefox() = browser will start up 
+#browser.get() > directs the browsers to this 
+
+Finding elements on the Page 
+- WebDriver have methods for finding elements. 
+
+{sele2}
+#all is case-sensitive 
+
+
+Once you have WebElement object > more methods is avalible 
+
+{sele3}
+
+
+
+{sele4}
+
+{sele5}
+
+#use find element method 
+
+Program wil output 
+Found <img> element with that class name!
+
+
+
+Clicking the Page 
+
+Elem.click() > This will click the link 
+
+{sele6}
+
+Page 259
