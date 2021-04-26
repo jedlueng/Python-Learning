@@ -16,3 +16,6 @@ linkElems = soup.select('.r a')
 numOpen = min(5, len(linkElems)) #Select the right element
 for i in range(numOpen): 
     webbrowser.open('http://google.com' + linkElems[i].get('href'))
+
+
+#After learning HTML it will make sense. 

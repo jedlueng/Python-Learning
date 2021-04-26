@@ -244,3 +244,34 @@ Elem.click() > This will click the link
 {sele6}
 
 Page 259
+
+25/4/2021
+
+Filling Out and Submitting Forms 
+
+#send_keys() method 
+#Find element then send_keys() to type in that element 
+
+{sele7}
+
+{sele8}
+
+#.submit() > clicking the Submit button for the form 
+
+
+________________________________________________________
+Sending Speical Keys 
+
+- special keyboard keys that are impossible to type into a string 
+
+{selecommon}
+
+{sele example}
+
+
+________________________________________________________
+
+Clicking Browser Buttons 
+
+{browser}s
+
