@@ -8,3 +8,12 @@ def exponent_diff(large,small):
 
 
 print(exponent_diff(1,0.01))
+
+
+
+#Actual result - the instruction is not clear
+
+
+print(0.01*(2**30))
+
+
