@@ -1,0 +1,16 @@
+Time to run grow as an input grows 
+
+Big O notation > show time complexity 
+
+Linear time O(n)
+
+Constant time O(1)
+
+Quadratic time O(n2(square))
+
+
+T = an + b 
+
+n = size of the input 
+a and b are two constant 
+
